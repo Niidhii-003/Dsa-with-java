@@ -1,3 +1,4 @@
+import java.util.*;
 public class binarytree{
     static class Node{
         int data;
@@ -22,14 +23,61 @@ public class binarytree{
             return newNode; 
         }
         ///preorder
-        public static void preorder(Node root){
+        public static void preorder(Node root){ //O(N)
             if(root==null){
                 return;
             }
-            System.out.println(root.data+" ");
+            System.out.print(root.data+" ");
             preorder(root.left);
             preorder(root.right);
 
+        }
+        //INORDER
+        public static void inorder(Node root){
+            if(root==null){
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data+" ");
+            inorder(root.right);
+        }
+        //POSTORDER
+        public static void postorder(Node root){
+            if(root==null){
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data+" ");
+        }
+        //LEVELORDER TRAVERSAL
+        public static void levelOrder(Node root){
+            if(root==null){
+                return ;
+            }
+            Queue<Node> q  = new java.util.LinkedList<Node>();
+            q.add(root);
+            q.add(null);
+            while(!q.isEmpty()){
+                Node currNode = q.remove();
+                if(currNode==null){
+                    System.out.println();
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                        q.add(null);
+                    }
+                }else{
+                    System.out.print(currNode.data+" ");
+                    if(currNode.left!=null){
+                        q.add(currNode.left);
+                    }
+                    if(currNode.right!=null){
+                        q.add(currNode.right);
+                    }
+                }
+
+            }
         }
     }
     
@@ -37,6 +85,9 @@ public class binarytree{
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
-        tree.preorder(root);
+        // tree.preorder(root);
+        // tree.inorder(root);
+        // tree.postorder(root);
+        tree.levelOrder(root);
     }
 }
