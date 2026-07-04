@@ -55,7 +55,7 @@ public class binarytree{
             if(root==null){
                 return ;
             }
-            Queue<Node> q  = new java.util.LinkedList<Node>();
+            Queue<Node> q = new java.util.LinkedList<Node>();
             q.add(root);
             q.add(null);
             while(!q.isEmpty()){
@@ -79,6 +79,7 @@ public class binarytree{
 
             }
         }
+        
     }
     
     public static void main(String args[]){
@@ -89,5 +90,6 @@ public class binarytree{
         // tree.inorder(root);
         // tree.postorder(root);
         tree.levelOrder(root);
+        
     }
 }
