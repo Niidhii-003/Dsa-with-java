@@ -103,13 +103,13 @@ public class avl {
         root=insert(root,40);
         root=insert(root,50);
         root=insert(root,25);
-        /*          AVL Tree
-                30
-                / \
-               20 40
-               /\  \
-             10 25 50
-        */
+        // // AVL Tree
+        //         30
+        //         / \
+        //        20 40
+        //        /\  \
+        //      10 25 50
+        // */
        
         preorder(root);
     }
