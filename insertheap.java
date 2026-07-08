@@ -20,6 +20,7 @@ public class insertheap{
         public int peek(){
             return arr.get(0);
         }
+        public 
     }
     public static void main(String args[]){
 
