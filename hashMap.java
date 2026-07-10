@@ -17,6 +17,7 @@ import java.util.*;
 //         System.out.println(map);
 
 //         ///SEARCH
+            // CONTAINS-KEY
 //         if(map.containsKey("Indonesia")){
 //             System.out.println("key is present in the map");
 //         }else{
@@ -26,6 +27,10 @@ import java.util.*;
 //         ///GET
 //         System.out.println(map.get("China"));  //key exists
 //         System.out.println(map.get("Indonesia"));  ///key does not 
+           
+           //REMOVE
+        //    System.out.println(hm.remove("Indonesia"));
+        //    System.out.println(hm);
         
 //         //ANOTHER WAY TO ITERATE OVER LOOP
 //         int arr[]={12, 15, 18};
@@ -33,6 +38,7 @@ import java.util.*;
 //             System.out.println(arr[i]+" ");
 //         }
 //         System.out.println();
+
 
 
 //         //another way
